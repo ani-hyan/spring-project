@@ -1,4 +1,3 @@
-//to be continued...
 public class Spring {
     private double k;
 
