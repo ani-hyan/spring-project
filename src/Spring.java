@@ -31,14 +31,14 @@ public class Spring {
         double[] coordinates = new double[n];
         double x = x0; //initial coordinate;
         double v = v0; //initial velocity;
-        //net force is equal to the force of the spring: F = -k/m * x
-        double a = -k/x;
+        //net force is equal to the force of the spring: F = -k * x; am = -kx
+        double a = -k*x;
 
         for(int i = 0; i < n; i++){
             coordinates[i] = x;
             v = a * dt;
             x = v * dt;
-            a = -k/x;
+            a = -k*x;
         }
 
         return coordinates;
@@ -57,13 +57,13 @@ public class Spring {
         double[] coordinates = new double[n];
         double x = x0; //initial coordinate;
         double v = 0; //initial velocity;
-        double a = -k/x;
+        double a = -k*x;
 
         for(int i = 0; i < n; i++){
             coordinates[i] = x;
             v = a * dt;
             x = v * dt;
-            a = -k/x;
+            a = -k*x;
         }
 
         return coordinates;
@@ -83,13 +83,13 @@ public class Spring {
         double[] coordinates = new double[n];
         double x = x0; //initial coordinate;
         double v = v0; //initial velocity;
-        double a = -k/x;
+        double a = -k*x;
 
         for(int i = 0; i < n; i++){
             coordinates[i] = x;
             v = a * dt;
             x = v * dt;
-            a = -k/x;
+            a = -k*x;
         }
         return coordinates;
     }
@@ -109,13 +109,13 @@ public class Spring {
         double[] coordinates = new double[n];
         double x = x0; //initial coordinate;
         double v = v0; //initial velocity;
-        double a = -k*m/x;
+        double a = -k/m*x;
 
         for(int i = 0; i < n; i++){
             coordinates[i] = x;
             v = a * dt;
             x = v * dt;
-            a = -k*m/x;
+            a = -k/m*x;
         }
 
         return coordinates;
